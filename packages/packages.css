@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "AnonymousPro";
+  src: url("./AnonymousPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AnonymousPro";
+  src: url("./AnonymousPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+.main {
+  padding-top: 2rem;
+  margin: 3rem auto;
+}
+
+.background {
+  background: url("../images//plans-background.jpg");
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+
+.package-item {
+  background-color: rgb(151, 238, 151);
+  filter: grayscale(40%);
+  padding: 2rem 1.5rem;
+  margin: 1rem;
+  border: 4px solid rgb(3, 102, 3);
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+}
+
+.package-item:hover,
+.package-item:active {
+  border-color: orange;
+  animation: scale-package 200ms ease-in-out both;
+}
+
+.package-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 1rem;
+}
+
+.package-item h1 {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.package-item h2 {
+  color: rgba(180, 178, 178, 0.9);
+}
+
+#package__badge {
+  position: absolute;
+  font-size: 0.75rem;
+  color: white;
+  background: #ff5454;
+  padding: 0.5rem;
+  right: 0;
+  top: 0;
+  transform: rotateZ(45deg) translateX(3.3rem) translateY(-1rem);
+  transform-origin: center;
+  width: 12rem;
+  text-align: center;
+}
+
+.package-item p {
+  background: white;
+  padding: 1rem;
+  border: 2px solid rgb(107, 153, 107);
+  color: rgb(3, 102, 3);
+  line-height: 1;
+  font-size: 1rem;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#plus {
+  background-color: rgb(121, 241, 121);
+}
+
+#free {
+  float: right;
+  background-color: rgb(165, 247, 165);
+}
+
+#premium {
+  background-color: rgb(48, 133, 48);
+}
+
+#premium h1 {
+  color: white;
+}
+
+@media (min-width: 40rem) {
+  .main {
+    max-width: 1500px;
+  }
+}
+
+@keyframes scale-package {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(101%);
+  }
+  100% {
+    transform: scale(102%);
+  }
+}
+
+/* @media (min-width: 1500px) {
+  .package-item {
+    border-left: none;
+  }
+
+  #free {
+    border-right:
+  }
+} */
